@@ -1,10 +1,8 @@
-from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
+from SublimeLinter.lint import Linter
 
-
-class __class__(Linter):
-    cmd = '__cmd__'
-    regex = r''
-    multiline = False
+class SublimeLinterCsl (Linter):
+    cmd = 'csl-validator.sh'
+    regex = r'^M="(?P<message>.+)" L=(?P<line>\d+) C=(?P<col>\d+)$'
     defaults = {
-        'selector': 'source.python'
+      'selector': 'source.csl, text.xml'
     }
