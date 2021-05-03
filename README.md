@@ -1,7 +1,7 @@
-SublimeLinter-csl
+SublimeLinter-contrib-csl
 =================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-csl.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-csl)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csl.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csl)
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to the [csl-validator.sh](https://github.com/citation-style-language/utilities) script. It will be used with files that have the Citation Style Language (CSL) syntax.
 
