@@ -1,6 +1,6 @@
 SublimeLinter-contrib-csl
 -----------------
-This linter plugin for SublimeLinter provides an interface to `csl-validator.sh`.
+This linter plugin for SublimeLinter provides Citation Style Language linting using an online service at https://validator.w3.org/nu/. It will only work when online.
 
 For more information, please see:
 https://github.com/Marcool04/SublimeLinter-contrib-csl
