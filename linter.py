@@ -1,19 +1,9 @@
 import json
 import logging
 import requests
-import socket
 from SublimeLinter.lint import LintMatch, PythonLinter
 
-logger = logging.getLogger(__name__)
-
-def offline(host="8.8.8.8", port=53, timeout=3):
-    # Adapted from https://stackoverflow.com/a/33117579
-    try:
-        socket.setdefaulttimeout(timeout)
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-        return False
-    except socket.error as ex:
-        return True
+logger = logging.getLogger('SublimeLinter.plugin.csl')
 
 class SublimeLinterContribCsl (PythonLinter):
     cmd = None
@@ -23,9 +13,6 @@ class SublimeLinterContribCsl (PythonLinter):
     }
 
     def run(self, cmd, code):
-        if offline():
-            logger.info("Offline, not linting CSL.")
-            return
         url = "https://validator.w3.org/nu/"
         files = { 'file': ('style.csl', code) }
         data = {
@@ -36,7 +23,18 @@ class SublimeLinterContribCsl (PythonLinter):
             'out': 'json',
             'showsource': 'no'
         }
-        response = requests.post(url, data=data, files=files)
+        try:
+            response = requests.post(url, data=data, files=files, timeout=(10, 60))
+        except requests.Timeout:
+            logger.error("Timeout performing request to w3 nu validator.")
+            self.notify_failure()
+            return
+        except requests.ConnectionError:
+            logger.info(
+                "Connection error performing request to w3 nu validator."
+            )
+            self.notify_failure()
+            return
         return(response.text)
 
     def find_errors(self, output):
