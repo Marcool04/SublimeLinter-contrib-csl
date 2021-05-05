@@ -15,3 +15,6 @@ Please use [Package Control](https://packagecontrol.io) to install the linter pl
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
 There are no specific settings for this plugin.
+
+## Credits
+Adapted from the [SublimeLinter template](https://github.com/SublimeLinter/SublimeLinter-template) by [Mark Collins](https://github.com/Marcool04), with huge assistance and patience from [herr kaste](https://github.com/kaste). Many thanks to you!
