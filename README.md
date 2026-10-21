@@ -1,7 +1,7 @@
 SublimeLinter-contrib-csl
 =========================
 
-**WARNING**: since https://github.com/Marcool04/SublimeLinter-contrib-csl/commit/47a07f9d1af457e4c1142895f832c975b3cef482 this is untested. Maybe it will work, maybe it will not. See https://github.com/Marcool04/SublimeLinter-contrib-csl/issues/1
+**WARNING**: since [commit 47a07f](https://github.com/Marcool04/SublimeLinter-contrib-csl/commit/47a07f9d1af457e4c1142895f832c975b3cef482) this is **untested**. Maybe it will work, maybe it will not. See https://github.com/Marcool04/SublimeLinter-contrib-csl/issues/1
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csl.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-csl)
 
