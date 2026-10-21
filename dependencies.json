@@ -1,7 +1,7 @@
 {
    "*": {
       "*": [
-         "requests"
+         "requests", "urllib3", "idna", "certifi", "charset_normalizer"
       ]
    }
 }
